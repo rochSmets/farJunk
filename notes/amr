@@ -1,0 +1,115 @@
+
+# ___ PatchHierarchy
+  IS-A
+  HAS-A vector of PatchLevel, PatchDescriptor, BaseGridGeometry
+  also contains the max nbr of levels
+
+# ___ PatchLevel
+  IS-A
+  HAS-A BoxLevel, PatchContainer, BoxContainer,
+        collection of local Patches, BaseGridGeometry, PatchDescriptor,
+        IntVector refinement ratio
+  when a PatchLevel is constructed, a PatchGeometry is constructed by
+  the GridGeometry and then set on the Patch
+
+# ___ BoxLevel
+  IS-A
+  HAS-A 
+  describe a collection of Boxes (in the metadata sense)
+  it contains the metadata for the associated patchLevel
+
+# ___ BoxContainer
+  IS-A
+  HAS-A
+  methods : intersectBoxes (must be unordered)
+            makeTree
+            removeIntersections
+            findOverlaps
+            hasOverlaps
+  can be "ordered" (like a set) or "unordered" (like a list)
+
+# ___ Box
+  IS-A
+  HAS-A collection of index (lower, upper), blockId(globalId, periodicId)
+  methods : growing/shrinking
+            shifting
+            coarsening/refining
+            intersection
+  the globalId contains the MPI rank, & a localId
+
+# ___ BoundaryBox
+  IS-A
+  HAS-A
+  says how the patch touches the boundary (along a node, an edge, a face)
+  & whether the boundary is at the lower or upper extent of the patch
+  in each coordination direction
+
+# ___ Connector
+  IS-A
+  HAS-A
+  needed to store overlap relationship between 2 boxes in a BoxLevel
+  (or 2 different BoxLevels, from the "base" 2 the "head")
+  the width of a connector is an IntVector (basically the nbr of cells
+  between the 2 boxes ?)
+
+# ___ GridGeometry
+  IS-A BaseGridGeometry
+  HAS-A BoxContainer (define the full extent of the computational mesh
+        at the coarsest level), IntVector (for periodicity)
+        data relating index space to physical coordinates
+  methods : getPhysicalDomain & computePhysicalDomain (both describe
+  the physical domain and return a container of Boxes)
+  SAMRAI provides a CartesianGridGeometry
+
+# ___ PatchGeometry
+  IS-A
+  HAS-A PatchBoundaries (container of BoundaryBoxes), bool (touches a
+        regular or periodic boundary)
+        data relating index space of the Patch to physical coordinates
+  describes the relation of the patch to the problem boundary
+  holds methods to determine whether a patch touches a problem boundary
+  (physical or periodic)
+  methods : getTouchesRegularBoundary & getTouchesPeriodicBoundary
+  (return boolean)
+  SAMRAI provides a CartesianPatchGeometry
+  a PatchGeometry is created by a GridGeometry
+
+# ___ Variable
+  IS-A
+  HAS-A dimension, name, instance Id, PatchDataFactory
+  abstractly represents a quantity (density, flux) that can be
+  instanciated on the mesh hierarchy
+  a Variable has a name and persistently exist in the simulation
+  it define the data type and the centering
+  but it do not contain storage for data on the mesh
+  abstract base class : define how data can be copied and communicated
+  for PHARE : FieldVariable and ParticleVariable
+  a Variable subclass creates the corresponding PatchDataFactory
+  and this PatchDataFactory creates the PatchData
+  a Variable also have a context (old, new...)
+  all of these are stored in a VariableDataBase
+  combination of Variable and Context gives a unique data Id
+  it is stored in the VariableDataBase
+  tjis Id is used to Patch::getPatchData(int Id)
+
+# ___ Patch
+  IS-A
+  HAS-A Box, PatchDescriptor, PatchGeometry, vector of PatchData
+  they are local (in the MPI sense)
+
+# ___ PatchData
+  IS-A
+  HAS-A Box (box and ghost box), IntVector (ghost width), double (timestamp)
+  interface with the complete collection of methods used by SAMRAI
+  2 manipulate data on a hierarchy
+  this class can be derived in CellData and NodeData
+  for PHARE : FieldData and ParticleData
+
+
+
+
+
+# ___ 
+  IS-A
+  HAS-A
+

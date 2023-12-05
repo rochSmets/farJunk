@@ -1,0 +1,18 @@
+
+This PR makes the `finest_part_data` working with the new format
+of particles data (like `iCells` had a size `(num_of_part)` while now,
+it is of size `(nom_of_part, ndim)`. It can be used with something like :
+
+```
+allParts = Run(run_path).GetParticles(time=time, pop_name=pop_name)
+particles = finest_part_data(allParts)
+
+# ..... scatter plot in x-vx plane
+plt.scatter(particles["proton"].x,
+            particles["proton"].v[:,0],
+            s=particles["proton"].weights*100)
+```
+
+While used in 1D, not all the functions have been tested, neither their 2D
+form.
+

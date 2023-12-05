@@ -1,0 +1,22 @@
+
+# __ MergePIC :
+* tracer augmetation/diminution en % des moments ordre N (min/max)
+* courbe de variabilite de quelque chose en fonction du nombre de mode
+* variabilite en fonction de kappa (defini independement de vMax)
+* TF de spline : optimiser la distribution en r ?
+* v initial de la particule N est le V moyen de la distribution
+  integree au coup d'avant, ie avec N-1 particules.
+* optimiser le position des M dernieres particules en meme temps.
+* commencer par remplir les ailes de la distribution, et finir avec
+  le coeur...  pas evident en fourier bien sur. mais remplir d'abord
+  les grands k pour finir avec les petits k.
+* utiliser une methode de rejection + rapide => "pas d'optimisation"
+* definir l'espace ou tirer des valeurs de vitesses.
+* a faire sur un espace de longueur fondamental fourier : on ne perd rien
+* construire les valeurs discretisees du nouveau f* (dans fourier)
+* construire la diff entre initial et reechantillonnee
+* pour tester une valeur : ne garder que celle qui diminue cette diff
+
+# ___ representation des f(v) :
+* plot 2d (v0, v1) avec une couleur pour v2 et taille de marker = weight
+* faire varier le poid des dernieres particules que l'on "fabrique" ?

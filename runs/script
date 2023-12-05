@@ -1,0 +1,3 @@
+mpirun -np 6 python3 ./Bk.py
+mpirun -np 6 python3 ./Bl.py
+mpirun -np 6 python3 ./Bm.py

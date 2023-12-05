@@ -1,0 +1,212 @@
+
+# __ dependances python
+dnf install python3-scipy
+dnf install python3-matplotlib
+dnf install python3-mpi4py-openmpi
+dnf install -y python3-ddt
+dnf install -y python3-h5py
+# update PYTHONPATH
+
+# __ paquets necessaires cpp
+pybind11-devel
+qt-creator
+hdf5-openmpi-devel
+
+# __ clone de phare
+git clone --recursive https://github.com/PHAREHUB/PHARE
+cd PHARE
+git submodule init
+git submodule update # to get cppdict submodules... the others are coming at clone with recursive
+cd subproject/cppdict  # ...
+git pull origin master # si besoin uniquement
+mkdir build-phare
+cd build-phare
+cmake ../PHARE
+cmake -DCMAKE_Build_Type=Release ../PHARE # pour compiler en release
+cmake -DCMAKE_CXX_FLAGS="-g3 -O3 -march=native -mtune=native" -DPHARE_DIAG_DOUBLES=1 -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DwithCaliper=OFF -DtestMPI=OFF -Dasan=OFF -DdevMode=OFF ../PHARE
+-DCMAKE_EXPORT_COMPILE_COMMANDS=1 # necessaire pour vim
+-DwithCaliper=OFF                 # pour avoir un report de perfs
+-DtestMPI=OFF                     # pour les tests en mpi
+-Dasan=OFF                        # pour le debug
+-DdevMode=ON                      # permet d'avoir des warnings en plus
+make -j # to make on all available cpus, or make -j8 to use 8 cpus
+# ccmake is the gui... used in the same way
+
+
+# __ executer les tests (dans le build dir)
+ctest -V # to get colors
+ctest --verbose
+ctest --output-on-failure -V -R test-field-refine
+ctest -N # to show all the test available
+ctest -R <string> # to run all the tests containing <string>
+ctest -E <string> # to run all the tests except the ones containing <string>
+ctest -I 3,5 # to run only tests ID 3 to 5
+# run le test cpp 'test-updater', et filtre pour ne garder que ceux qui suivent la regex
+./test-updater --gtest_filter="*particlesUntouchedInMomentOnlyMode*"
+# run le test python : nom_de_la_classe.nom_de_la_methode en prenant le 17eme arg du unpack
+python test_fields_advance_2d.py AdvanceTest.test_field_coarsening_via_subcycles_17
+
+# __ executer PHARE en ssh :
+./PHARE.EXE /path/to/file/job.py
+* le script job.py doit contenir les 3 objets
+  Simulation, MaxwellianFluidModel, ElectronModel
+
+# __ executer PHARE sous python3 :
+python3 /path/to/file/job.py
+* pour retrouver l'executable PHARE.EXE, le path du build doit etre dans PYTHONPATH
+export PHARE_LOG=RANK_FILES # pour avoir un fichier de log pas cpu
+mkdir .log pour ranger les *.out par cpu
+
+# __ AMR index
+* l'indice AMR est un entier
+* il est centre sur la cellule (dual)
+* c'est l'indice d'une cellule si tout le domaine (et pas seulement le patch)
+  etait a la resolution du niveau considere
+attention : avec les ghosts, on peut avoir des indices negatifs
+
+# __ les box
+* les box (une boite) et ghost box (box augmentee des ghosts) sont des concepts
+  samrai
+* les ghost area box sont des concepts phare, qui sont la ghost box dont
+  on soustrait la box
+
+# __ pour inspecter les fichiers h5
+>>> import h5py
+>>> f = h5py.File('ions_density.h5', 'r')
+* f a alors une structure de dictionnaires. on peut donc en voir les cles
+>>> list(f.keys())
+['dset0', 'dset1']
+>>> dset0 = f['dset0'] # eventuellement un tableau numpy
+>>> f.name # ou dset1.name retourne le nom du groupe... '/' pour la racine
+>>> list(f.attrs.keys()) # pour lister les attributs
+['attr0', 'attr1']
+>>> f.attrs['attr0']
+1.2
+
+# _____ vim
+meld sous vim...
+:nmap pour voir tout les mappings (normal, visual, insert)... vmap, imap
+dnf install ripgrep
+
+# ___ yank into clipboard
+set clipboard=unnamedplus
+nnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+
+CocConfig to open coc-settings.json and then paste :
+{
+   "clangd.arguments": ["--log=verbose", "--pretty",
+                        "--background-index=1",
+                        "--limit-results=0",
+                        "--header-insertion=iwyu"],
+   "clangd.fallbackFlags": [ "-std=c++17" ],
+   "clangd.onConfigChanged": "restart",
+}
+
+:CocInstall coc-clangd
+
+
+
+
+# _____ pour le load balancer
+1. aller dans integrator.hpp, la ou le loadBalancer est defini
+2. essayer le cascad partioner (car il est non-uniforme)
+3. lui donner un id qui est le nbr de particules par cellule, cell-center
+4. le workLoad_val est un patchData SAMRAI : il doit etre allocate
+5 utiliser les NdArrayView qui sont la :
+https://github.com/nicolasaunai/PHARE/blob/tag2d/src/amr/tagging/default_hybrid_tagger_strategy.hpp#L43-L45
+
+* lire gunney (cascad vs tree pationner)
+* comprendre l'API du samrai cascad partitioner
+  a besoin de l'id d'un patch cell-center
+* calculer ce que l'on y met (un poid = nbr part per cell) [core]
+* trouver l'endroit ou on va mettre ce field (nom, centering)
+  - gridlayout devra donc le connaitre pour donner son centering
+* cette grandeur sera un cellData (SAMRAI) car peut pas etre un field...
+  donc pas besoin de passer par le resource manager...?
+* relire la doc SAMRAI : p.32 registerVariableContex & getPatchId
+* core/utilities/cellmap
+* le truc 2d sera en fait le view d'un pointeur sur double
+* mettre le cascad partioner dans l'integrator
+* regarder les strategy pattern
+* regarder les tests de SAMRAI
+
+================================================================================
+* creer une variable samrai (workLoadVariable) qui sera une celleVariable
+* recuperer un context avec getContext (default) aupres du ressourceManager
+* register cette variable dans la variableDataBase (besoin var + context)
+  (template de la dim) : ResourcesManager.registerResources()
+  puis ResourcesManager.allocate() pour allouer des resources sur un patch
+  pour utiliser des ressourceUser, il faut que ces data soient setOnPatch()
+* regarder :src/amr/resources_manager/resources_manager.hpp
+* appeler registerVariableAndContext pour avoir l'ID de la workLoadVariable
+* creer le patchData pour chaque level:patch  avec (varId, context)
+
+* le workLoadData sera un attribut de la classe WorkLoadEstimator
+* l'instance de WorkLoadEstimator sera appellee par le advanceLevel
+...  workLoadEstimator.estimate(hierarchy, ilevel, model)
+================================================================================
+
+phare_training
+
+git clone --recursive https://hephaistos.lpp.polytechnique.fr/rhodecode/GIT_REPOSITORIES/LPP/Users/Payet/phare_training
+git checkout multiphysics
+
+src/amr/tagging/hybrid_tagger.hpp
+dans multiphysicsintegrator... toutes les fct sur tagg (addtagger...)
+
+
+dim & interporder : a compiletime, les objets connaissent dim et interporder
+les fonctions sont donc compilees pour toutes les combinaisons
+
+a runtime, on va donc chercher la bonne fonction... avec un makeAtRunTime
+(dans meta_utilities.hpp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_________________
+
+Integrator::Integrator() va prendre un arg en plus : un IWorkLoad
+puis juste apres le auto loadBalancer...
+appeler le getLoadBalanceDependsOnPatchData(IWorkLoad->getID())
+
+attention, il faufra un ref sur IWorkLoad
+
+ajouter le .name dans le nom du loadBalancer
+
+
+le concrete hybrid_WLE ne connait pas samrai
+c'est l'interface qui connait... et ses derivees
+
+
+
+
+
+on a vector de shared nourrit avec un unique_ptr (dans le addworkload)
+ce qui est l'origine de notre probleme
+
+-> on devrait tout mettre unique
+quand on aura que des unique_ptr, il faudra bien avoir un dtor virtuel
+
+CC=clang CXX=clang++ cmake ..
+
+/!\ ... virer le PYTHONPATH du zshrc pour n'en garder qu'un seul
+
+* le hybrid_init defini dans simulator.hpp doit prendre comme arg une hierarchy
+* dans le hybrid_init, if(restart) -> for level, for patch, allocate
+
+https://github.com/rochSmets/PHARE/blob/loadBalancer/src/amr/resources_manager/amr_utils.hpp#L192-L215
+
+

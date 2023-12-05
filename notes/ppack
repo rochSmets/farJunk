@@ -1,0 +1,248 @@
+
+> domainParticles
+> -> les particules qui sont dans le domaine
+
+yes
+
+
+
+
+> patchGhostParticles
+> -> les particules qui sont dans les ghosts cells, qui sont des repliques
+>   des cellules d'un domaine voisin, et defini sur un meme level.
+>   ces particules sont donc forcement des copies de domainParticles
+>   du domaine voisin.
+
+
+yes
+
+
+
+
+
+> levelGhostParticles
+> -> les particules qui sont dans les ghosts cells, mais qui ne peuvent pas etre
+>   des repliques des cellules d'un domaine voisin car celui-ci n'est pas
+>   sur le meme level. ces particules sont donc issues du split de particules
+>   sur un level inferieur,
+
+
+
+yes
+
+> dont la position est telle que les particules
+>   issues du split seront dans les ghost cells (toutes !)
+> 
+
+
+
+toutes les mères n’ont pas forcément toutes leurs filles dans les ghost cells
+Pour remplir les ghost cell on fait en gros : 
+
+boucle sur toutes les coarse
+si coarse particle a distance de splitting de la ghost box
+refined_particles = split(coarse particle)
+for refined_particle in refined_particles:
+   si refined_particle is in ghost_box
+     append()
+
+
+
+
+>   les levelGhostParticles sont deposees a un pas de temps coarse,
+>   car elle viennent d'un level coarse. elles sont alors splittees...
+>   elles vont ensuite pouvoir se deplacer a chaque pas de temps fin.
+>   elles pouront alors :
+>   _ rester dans la ghost zone
+>   _ quitter la ghost zone pour aller dans le domaine
+>   _ quitter la ghost zone sans rentrer dans le domaine
+> 
+
+
+oui
+
+
+
+
+> 
+>   la ghost zone a pour but d'assurer un flux entrant coherant
+>   avec ce qui se passe chez les voisins.
+
+
+oui, et cohérent avec ce qui se passe au au next coarser pour les levelghost zones
+
+
+> donc on ne se preoccupe pas
+>   des particules qui vont quitter le domaine pour allez dans la ghast zone.
+>   ces particules sont "perdues", au sens ou on ne les fait pas entrer
+>   ailleur.
+
+
+oui
+
+
+
+>   Comme le split n'est pas local, toutes les particules issues du split
+>   qui seront dans les ghosts ne viennent pas forcement de particules
+>   coarse dans ces ghosts... elles peuvent venir de particules coarse un peu
+>   a cote. de la meme maniere, les particules splittees ne tombent pas
+>   toutes dans les ghosts.
+> 
+
+
+exactement, voir plus haut.
+
+
+
+
+> Pour recuperer toutes les levelGhostParticles :
+> 
+> 1. on prend toutes les particules coarse geometriquement dans les ghost
+> que l'on veut peupler (donc fines), plus celles un peu autour, dont les
+> splits peuvent arriver aussi dans ce domaine. Ainsi, on est sure d'avoir
+> tout le monde.
+
+
+oui, voir le pseudo code au dessus
+
+
+> 
+> https://github.com/PHAREHUB/PHARE/blob/master/src/amr/data/particles/refine/particles_data_split.h#L184
+
+
+
+
+yep
+
+
+> 
+> 2. on les split, pour faire des particules fines.
+> 
+> https://github.com/PHAREHUB/PHARE/blob/master/src/amr/data/particles/refine/particles_data_split.h#L186
+> 
+
+
+yes
+
+
+
+> 3. on ne gardent que celles qui sont geometriquement dans les ghosts
+> que l'on veut remplir.
+> 
+> https://github.com/PHAREHUB/PHARE/blob/master/src/amr/data/particles/refine/particles_data_split.h#L214
+
+
+oui, c’est le « if » de copy_if avec la condition donnée par la lambda isInDest, qui prend une particule et regarde si elle est dans la destinationBox
+auto isInDest = [&destinationBox](auto const& particle)
+{ return isInBox(destinationBox, particle); };
+
+
+
+
+
+> 4. ca nous fait un set de particules a t0 (coarse) qui vont pouvoir
+> avancer sur la grille fine aux pas de temps fins.
+
+
+oui
+
+
+
+> -> on va les suivre, et en perdre quelque unes au cours du temps, soit
+> parcequ'elle devienent des domainParticles, soit parcequ'elle vont ailleurs.
+> dans tout les cas, elle quittent les ghost cells...
+
+
+elles peuvent les quitter oui, mais elles peuvent y rester aussi.
+
+
+
+> je dirais que ces particules vont constituer le set des LevelGhostParticles.
+> cet ensemble est important pour assurer un flux "entrant".
+
+le flux entrant du level, il y a aussi du flux entrant par les patchghost.
+
+
+
+> 
+> Mais on a un probleme pour les moments... si on utilise ces particules
+> pour deposer sur les noeuds incomplets, comme leur nombre est une fonction
+> decroissante du temps, les noeuds incomplet du domaine... vont avoir du mal
+> a etre complet.
+
+
+les noeuds incomplets qui sont au bord du domaine en effet.
+Pour les noeuds qui sont au bord d’un patch voisin, ça va car on échange les ghosts avec les voisins AVANT de déposer les moments de ces particules, donc tout va bien.
+
+
+
+
+> 
+> Sachant qu'il y a des old & des new, je dirais que l'on remplit les
+> levelGhostParticleOld a t0 coarse, les levelGhostParticleNew a t1 coarse,
+> et a chaque temps fin, on calcule les moments avec alpha old + (1-alpha)new,
+> ou alpha est une fonction lineaire de tFin, entre t0 & t1.
+
+
+tout à fait. Pour déposer les moments sur les noeuds ghost et incomplets qui sont au bord du level (frontières des patch qui ne sont pas adjacentes avec un autre patch du meme level) on a deux choix : 
+- soit on raffine les moments venant du next coarser, mais alors on peut pas « completer » les noeuds incomplets, on peut juste écraser… c’est un peu dommage car plus on se rapproche du patch, plus la contribution des particules du domaine est importante et si on remplace par un raffinement des moments du next coarser, on perd cette info.
+
+- soit on déposer les level ghost, le problème étant qu’il y en a N qui viennent de T0 coarse, et M qui viennent de T1 coarse… donc ont peut pas interpoler la position d’une particule levelGhost entre T0 et T1, car une présente à T0 n’existe peut-être pas a T1… du coup on interpole toutes les levelGhostOld et toutes les levelGhostNew avec un chef alpha *new et (1-alpha)*old, avec alpha = 0 si t=T0 et alpha=1 pour t=T1.
+
+
+
+
+> donc on a t0, on remplit levelGhostParticles ainsi que levelGhostParticlesOld.
+
+en fait, levelGhostParticlesOld est remplis: 
+
+- a l’initialisation du level (lorsqu’il est créé en cours de simulations ou à t=0) en raffinant les coarse définies au meme temps, c’est un temps de synchro où tous les niveaux sont défini à ce temps.
+- soit pendant l’évolution de la simu or création de level, alors les old sont juste un move des new une fois que le level fin a atteint t=T1 coarse.
+
+les levelGhostParticlesNew elles sont définies à T1 sur le coarse, donc on ne peut les avoir sur le fin qu’une fois que le coarse a atteint T1, c’est à dire au début du premier substep du niveau fin.
+
+
+
+> Ensuite, on les pousse sur le niveau coarse jusqu'a t1, et on remplit
+> levelGhostParticleNew. A chaque temps fins, Old & New ne changent pas,
+> et sont utilises pour les moments. levelGhostParticles se vide au cours
+> du temps pour remplir les domainParticles.
+
+
+
+tout à fait. 
+et  : 
+A chaque synchronisation entre fin et coarse, les new sont déversées dans les old, et copiées dans levelGhostParticles (car ce tableau est une copie vidable des old).
+A chaque début de substep, les new sont obtenues du next coarse qui est a T1
+
+
+
+> 
+> 
+> 
+> levelGhostParticlesOld
+> -> ensemble de split issues de particles sur coarse a t0
+> 
+> 
+> levelGhostParticlesNew
+> -> ensemble de split issues de particules sur coarse a t1
+> 
+
+
+
+je pense que t’as bien compris.
+
+regarde tu devrais être capable de comprendre tout ça : 
+
+https://github.com/nicolasaunai/PHARE/blob/advancement/src/solver/solvers/solver_ppc.h#L466-L496 <https://github.com/nicolasaunai/PHARE/blob/advancement/src/solver/solvers/solver_ppc.h#L466-L496>
+
+qui appelle ça : 
+
+https://github.com/nicolasaunai/PHARE/blob/advancement/src/core/numerics/ion_updater/ion_updater.h#L77-L176 <https://github.com/nicolasaunai/PHARE/blob/advancement/src/core/numerics/ion_updater/ion_updater.h#L77-L176>
+
+
+
+
+
+
+
