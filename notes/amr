@@ -26,7 +26,7 @@
             removeIntersections
             findOverlaps
             hasOverlaps
-  can be "ordered" (like a set) or "unordered" (like a list)
+  can be "unordered" (like a set) or "ordered" (like a list)
 
 # ___ Box
   IS-A
@@ -90,7 +90,7 @@
   all of these are stored in a VariableDataBase
   combination of Variable and Context gives a unique data Id
   it is stored in the VariableDataBase
-  tjis Id is used to Patch::getPatchData(int Id)
+  this Id is used to Patch::getPatchData(int Id)
 
 # ___ Patch
   IS-A
