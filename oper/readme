@@ -1,1 +1,11 @@
 pyphare/pyphare/core/operators.py
+
+run.py :
+* sur la base de _compute_current, faire un _compute_to_primal
+
+def GetB(time, all_primal=True):
+    b = _get_hierarchy(time, file_name) # recuperer une hier depuis h5
+    if not all_primal:
+        return self._get(b)
+    else:
+        return compute_hier_from(b, compute_to_primal)
