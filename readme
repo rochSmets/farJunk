@@ -8,7 +8,7 @@ dnf install -y python3-h5py
 # update PYTHONPATH
 
 # __ paquets necessaires cpp
-pybind11-devel
+# pybind11-devel... now downloaded on the fly
 qt-creator
 hdf5-openmpi-devel
 
