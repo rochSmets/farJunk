@@ -8,7 +8,7 @@ dnf install -y python3-h5py
 # update PYTHONPATH
 
 # __ paquets necessaires cpp
-pybind11-devel
+# pybind11-devel... now downloaded on the fly
 qt-creator
 hdf5-openmpi-devel
 
@@ -108,7 +108,13 @@ CocConfig to open coc-settings.json and then paste :
 
 :CocInstall coc-clangd
 
-
+# ___ gdb
+utiliser un .gdbinit dans $HOME et un dans PHARE
+pour lancer gdb sur un test
+py : gdb --args python3 nomDuTest.py
+cpp : gdb nomDuTest.exe
+export MKN_DBG="gdb -batch -ex run -ex bt --args"
+$MKN_DBG python3 test_file.py
 
 
 # _____ pour le load balancer
