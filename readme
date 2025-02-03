@@ -57,6 +57,9 @@ python3 /path/to/file/job.py
 export PHARE_LOG=RANK_FILES # pour avoir un fichier de log pas cpu
 mkdir .log pour ranger les *.out par cpu
 
+# __ debug phare
+gdb --args python config.py
+
 # __ AMR index
 * l'indice AMR est un entier
 * il est centre sur la cellule (dual)
