@@ -13,25 +13,22 @@
 #SBATCH --mail-user=roch.smets@lpp.polytechnique.fr
 
 ## ___ load modules
-module load cmake/3.19.7
-module load gcc/10.2.0
-module load openmpi/4.1.0
-module load hdf5/1.12.1
-module load mambaforge/22.11.1-4
+source ./module.sh
 
-#use conda for phare env... created with mamba !
+## ___ use conda for phare env... created with mamba !
 conda activate phare
 
 ## ___ set the PYTHONPATH
-export PYTHONPATH=/mnt/beegfs/workdir/roch.smets/builds/master:/mnt/beegfs/home/LPP/roch.smets/codes/far/PHARE/pyphare
+source ./paths.txt
+export PYTHONPATH="${python_path}"
 
 ## ___ compile phare
-cd $WORKDIR/builds/master
+cd $build_dir
 cmake -DCMAKE_CXX_FLAGS="-g3 -O3 -march=native -mtune=native -DPHARE_DIAG_DOUBLES=1" \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
       -DwithCaliper=OFF \
       -DtestMPI=OFF \
       -Dasan=OFF \
       -DdevMode=OFF \
-      "$HOME"/codes/far/PHARE
+      "$src_dir"
 make -j40

@@ -1,0 +1,4 @@
+build_dir=${HOME}/codes/far/builds/release/master
+src_dir=${HOME}/codes/far/PHARE
+pyphare_dir=${src_dir}/pyphare
+python_path=${build_dir}:${pyphare_dir}

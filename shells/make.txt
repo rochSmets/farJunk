@@ -1,0 +1,1 @@
+build_dir=${HOME}/codes/far/builds/release/master

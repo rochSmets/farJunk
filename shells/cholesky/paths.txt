@@ -1,0 +1,7 @@
+build_dir=${WORKDIR}/codes/far/builds/release/master
+run_dir=${WORKDIR}/sherpa/far/harris/tiny
+job_name=harris.py
+
+src_dir=${HOME}/codes/far/PHARE
+pyphare_dir=${src_dir}/pyphare
+python_path=${build_dir}:${pyphare_dir}
