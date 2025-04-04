@@ -1,4 +1,6 @@
-build_dir=${HOME}/codes/far/builds/debug/close
+build_dir=${HOME}/codes/far/builds/release/master
+run_dir=${HOME}/codes/far/farMe/Harris/tiny/run
+job_name=${run_dir}/harris.py
 
 src_dir=${HOME}/codes/far/PHARE
 pyphare_dir=${src_dir}/pyphare
