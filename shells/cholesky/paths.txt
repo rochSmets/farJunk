@@ -1,4 +1,4 @@
-build_dir=${WORKDIR}/codes/far/builds/release/master
+build_dir=${WORKDIR}/far/builds/release/master
 run_dir=${WORKDIR}/sherpa/far/harris/tiny
 job_name=harris.py
 
