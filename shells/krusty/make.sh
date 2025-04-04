@@ -7,3 +7,4 @@ cmake -DCMAKE_CXX_FLAGS="-g3 -O3 -march=native -mtune=native -DPHARE_DIAG_DOUBLE
       -Dasan=OFF \
       -DdevMode=OFF \
       "$src_dir"
+make -j
