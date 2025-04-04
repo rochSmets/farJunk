@@ -1,0 +1,401 @@
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+validating dim=2
+validating dim=2
+2d periodic validation
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+2d periodic validation
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+validating dim=2
+2d periodic validation
+validating direction ... 0
+direction 0 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+validating direction ... 1
+direction 1 is periodic?
+checked vx : fL = 0.0 and fR = 0.0 and check = True
+checked vy : fL = 0.0 and fR = 0.0 and check = True
+checked vz : fL = 0.0 and fR = 0.0 and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthx : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthy : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+checked vthz : fL = [0.70710678 0.70710678 0.70710678 0.70710678] and fR = [0.70710678 0.70710678 0.70710678 0.70710678] and check = True
+[node005:262156] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262144] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262158] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262159] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262142] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262145] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262146] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262147] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262149] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262153] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262155] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262157] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262143] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262161] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262141] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262148] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262150] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262151] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262152] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+[node005:262160] mca_base_component_repository_open: unable to open mca_op_avx: /mnt/beegfs/softs/opt/gcc_10.2.0/openmpi/4.1.0/lib/openmpi/mca_op_avx.so: undefined symbol: ompi_op_base_module_t_class (ignored)
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+Warning: PHARE was not built with the configurator active
+t =  0.00500  -  0.35643sec  - total  0.3564sect =  0.01000  -  0.36629sec  - total  0.7227sect =  0.01500  -  0.35851sec  - total   1.081sect =  0.02000  -  0.42444sec  - total   1.506sect =  0.02500  -  0.34811sec  - total   1.854sect =  0.03000  -  0.36054sec  - total   2.214sect =  0.03500  -  0.36796sec  - total   2.582sect =  0.04000  -  0.35973sec  - total   2.942sect =  0.04500  -  0.34843sec  - total    3.29sect =  0.05000  -  0.35513sec  - total   3.646sect =  0.05500  -  0.35254sec  - total   3.998sect =  0.06000  -  0.41676sec  - total   4.415sect =  0.06500  -  0.32911sec  - total   4.744sect =  0.07000  -  0.33762sec  - total   5.082sect =  0.07500  -  0.30639sec  - total   5.388sect =  0.08000  -  0.31711sec  - total   5.705sect =  0.08500  -  0.32250sec  - total   6.028sect =  0.09000  -  0.31910sec  - total   6.347sect =  0.09500  -  0.31763sec  - total   6.664sect =  0.10000  -  0.32065sec  - total   6.985sect =  0.10500  -  0.32943sec  - total   7.314sect =  0.11000  -  0.38942sec  - total   7.704sect =  0.11500  -  0.35689sec  - total   8.061sect =  0.12000  -  0.36321sec  - total   8.424sect =  0.12500  -  0.36320sec  - total   8.787sect =  0.13000  -  0.36479sec  - total   9.152sect =  0.13500  -  0.36139sec  - total   9.513sect =  0.14000  -  0.39468sec  - total   9.908sect =  0.14500  -  0.36180sec  - total   10.27sect =  0.15000  -  0.42890sec  - total    10.7sect =  0.15500  -  0.36348sec  - total   11.06sect =  0.16000  -  0.36460sec  - total   11.43sect =  0.16500  -  0.35231sec  - total   11.78sect =  0.17000  -  0.35436sec  - total   12.13sect =  0.17500  -  0.35650sec  - total   12.49sect =  0.18000  -  0.35130sec  - total   12.84sect =  0.18500  -  0.34977sec  - total   13.19sect =  0.19000  -  0.41905sec  - total   13.61sect =  0.19500  -  0.32868sec  - total   13.94sect =  0.20000  -  0.31160sec  - total   14.25sect =  0.20500  -  0.32844sec  - total   14.58sect =  0.21000  -  0.32017sec  - total    14.9sect =  0.21500  -  0.32245sec  - total   15.22sect =  0.22000  -  0.32321sec  - total   15.54sect =  0.22500  -  0.33005sec  - total   15.87sect =  0.23000  -  0.33814sec  - total   16.21sect =  0.23500  -  0.41173sec  - total   16.62sect =  0.24000  -  0.36139sec  - total   16.99sect =  0.24500  -  0.36797sec  - total   17.35sect =  0.25000  -  0.37275sec  - total   17.73sect =  0.25500  -  0.37286sec  - total    18.1sect =  0.26000  -  0.36752sec  - total   18.47sect =  0.26500  -  0.36913sec  - total   18.84sect =  0.27000  -  0.37112sec  - total   19.21sect =  0.27500  -  0.35790sec  - total   19.57sect =  0.28000  -  0.41568sec  - total   19.98sect =  0.28500  -  0.37128sec  - total   20.35sect =  0.29000  -  0.36887sec  - total   20.72sect =  0.29500  -  0.35325sec  - total   21.07sect =  0.30000  -  0.35576sec  - total   21.43sect =  0.30500  -  0.35926sec  - total   21.79sect =  0.31000  -  0.36575sec  - total   22.16sect =  0.31500  -  0.36252sec  - total   22.52sect =  0.32000  -  0.40621sec  - total   22.92sect =  0.32500  -  0.33107sec  - total   23.25sect =  0.33000  -  0.33100sec  - total   23.59sect =  0.33500  -  0.32264sec  - total   23.91sect =  0.34000  -  0.33237sec  - total   24.24sect =  0.34500  -  0.33426sec  - total   24.58sect =  0.35000  -  0.33525sec  - total   24.91sect =  0.35500  -  0.34953sec  - total   25.26sect =  0.36000  -  0.35999sec  - total   25.62sect =  0.36500  -  0.41689sec  - total   26.04sect =  0.37000  -  0.37352sec  - total   26.41sec

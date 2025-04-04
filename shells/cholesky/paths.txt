@@ -1,5 +1,5 @@
 build_dir=${WORKDIR}/far/builds/release/master
-run_dir=${WORKDIR}/sherpa/far/harris/tiny
+run_dir=${WORKDIR}/far/farMe/Harris/tiny/run
 job_name=harris.py
 
 src_dir=${HOME}/codes/far/PHARE
