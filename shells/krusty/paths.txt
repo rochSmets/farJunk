@@ -1,6 +1,9 @@
-build_dir=${HOME}/codes/far/builds/release/master
-run_dir=${HOME}/codes/far/farMe/Harris/tiny/run
-job_name=${run_dir}/harris.py
+build_dir=${HOME}/codes/far/builds/release/close
+
+### run_dir=${HOME}/codes/far/farMe/Harris/tiny/run
+run_dir={$HOME}/codes/far/farMe/ellipsis
+### job_name=${run_dir}/harris.py
+job_name=${run_dir}/ellipsis.py
 
 src_dir=${HOME}/codes/far/PHARE
 pyphare_dir=${src_dir}/pyphare
