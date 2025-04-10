@@ -1,4 +1,6 @@
-build_dir=${HOME}/codes/far/builds/release/close
+build_dir=${HOME}/codes/far/builds/debug/close
+build_type=debug
+### build_type=release
 
 ### run_dir=${HOME}/codes/far/farMe/Harris/tiny/run
 run_dir={$HOME}/codes/far/farMe/ellipsis
