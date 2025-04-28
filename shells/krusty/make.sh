@@ -1,4 +1,4 @@
-source ./paths.txt
+source ${HOME}/codes/far/farJunk/shells/krusty/paths.txt
 cd $build_dir
 if [[ $build_type == debug ]]; then
     cmake -DCMAKE_BUILD_TYPE=Debug \
