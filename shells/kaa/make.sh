@@ -16,6 +16,8 @@ else
           -DtestMPI=OFF \
           -Dasan=OFF \
           -DdevMode=OFF \
+          -DCMAKE_PREFIX_PATH=/usr/lib64/openmpi \
+          -DHDF5_IS_PARALLEL=TRUE \
           "$src_dir"
 fi
 make -j
