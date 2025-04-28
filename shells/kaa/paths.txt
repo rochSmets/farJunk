@@ -1,0 +1,20 @@
+build_dir=$HOME/codes/far/builds/release/master
+### build_type=debug
+build_type=release
+
+### run_dir=$HOME/codes/far/farMe/Harris/tiny/run
+### run_dir=$HOME/codes/far/farMe/ellipsis
+run_dir=$HOME/codes/far/farTeach/2024/run/weak
+### job_name=${run_dir}/harris.py
+### job_name=$run_dir/ellipsis.py
+job_name=$run_dir/wp1.py
+
+src_dir=$HOME/codes/far/PHARE
+pyphare_dir=${src_dir}/pyphare
+python_path=${build_dir}:${pyphare_dir}
+
+echo "src dir     : " $src_dir
+echo "build dir   : " $build_dir
+echo "run dir     : " $run_dir
+echo "job name    : " $job_name
+echo "python path : " $python_path
