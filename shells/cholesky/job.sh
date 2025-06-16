@@ -11,14 +11,18 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=roch.smets@lpp.polytechnique.fr
 
+/mnt/beegfs/workdir/roch.smets/far/farJunk/shells/cholesky
+
+shell_dir=${WORKDIR}/far/farJunk/shells/cholesky
+
 ## ___ load modules
-source ./module.sh
+source ${shell_dir}/module.sh
 
 ## ___ use conda for phare env... created with mamba !
 conda activate phare
 
 ## ___ set the PYTHONPATH
-source ./paths.txt
+source ${shell_dir}/paths.txt
 export PYTHONPATH="${python_path}"
 
 ## ___ run phare with python

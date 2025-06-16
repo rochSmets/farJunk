@@ -1,6 +1,6 @@
 build_dir=${WORKDIR}/far/builds/release/master
-run_dir=${WORKDIR}/far/farMe/Harris/tiny/run
-job_name=harris.py
+run_dir=${WORKDIR}/far/farMe/ionBeam/yao/run 
+job_name=yao.py
 
 src_dir=${HOME}/codes/far/PHARE
 pyphare_dir=${src_dir}/pyphare
