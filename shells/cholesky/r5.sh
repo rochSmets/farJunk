@@ -19,4 +19,4 @@ home_kaa=/home/smets
 
 # rsync -av --exclude="checks" $WORKDIR/far/farMe/ionBeam/yao/run/yao-01a smets@kaa:/home/smets/
 
-rsync -av --exclude="checks" --exclude=".log" --exclude=".phare" $WORKDIR/${run_dir} smets@kaa:${home_kaa}/${run_dir}
+rsync -av --exclude="checks" --exclude=".log" --exclude=".phare" $WORKDIR/${run_dir}/ smets@kaa:${home_kaa}/${run_dir}/
