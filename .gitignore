@@ -1,4 +1,3 @@
 .*
 !/.gitignore
-./shells/cholesky/paths.txt
-./shells/krusty/paths.txt
+**/paths.txt
