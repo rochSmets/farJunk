@@ -11,8 +11,6 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=roch.smets@lpp.polytechnique.fr
 
-/mnt/beegfs/workdir/roch.smets/far/farJunk/shells/cholesky
-
 shell_dir=${WORKDIR}/far/farJunk/shells/cholesky
 
 ## ___ load modules
@@ -26,5 +24,5 @@ source ${shell_dir}/paths.txt
 export PYTHONPATH="${python_path}"
 
 ## ___ run phare with python
-cd $run_dir
+cd $WORKDIR/${run_dir}
 mpirun -n $SLURM_NTASKS python $job_name

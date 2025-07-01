@@ -11,8 +11,10 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=roch.smets@lpp.polytechnique.fr
 
-kaa=( smets@129.104.27.86 )
+shell_dir=${WORKDIR}/far/farJunk/shells/cholesky
 
-source ./paths.txt
+source ${shell_dir}/paths.txt
 
-rsync -av --exclude="checks" -e "ssh -A smets@129.104.27.3 ssh" $run_dir "$kaa":"$run_dir"
+myself_kaa=( smets@129.104.27.86 )
+
+rsync -av --exclude="checks" $WORKDIR/{$run_dir} "$myself_kaa":$HOME/{$run_dir}
