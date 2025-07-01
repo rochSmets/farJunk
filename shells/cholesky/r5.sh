@@ -15,6 +15,8 @@ shell_dir=${WORKDIR}/far/farJunk/shells/cholesky
 
 source ${shell_dir}/paths.txt
 
-myself_kaa=( smets@129.104.27.86 )
+home_kaa=/home/smets
 
-rsync -av --exclude="checks" $WORKDIR/{$run_dir} "$myself_kaa":$HOME/{$run_dir}
+# rsync -av --exclude="checks" $WORKDIR/far/farMe/ionBeam/yao/run/yao-01a smets@kaa:/home/smets/
+
+rsync -av --exclude="checks" --exclude=".log" --exclude=".phare" $WORKDIR/${run_dir} smets@kaa:${home_kaa}/${run_dir}
