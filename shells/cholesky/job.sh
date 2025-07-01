@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## ___ sbatch directives
-#SBATCH --job-name=harris
+#SBATCH --job-name=far
 #SBATCH --output=%x-%j.log
 #
 #SBATCH --ntasks=20
