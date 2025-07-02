@@ -1,8 +1,8 @@
 build_dir=$HOME/far/builds/release/master
 build_type=release
 
-run_dir=$HOME/far/farMe/ionBeam/yao/run/
-job_name=${run_dir}/yao.py
+run_dir=far/farMe/ionBeam/yao/run
+job_name=$HOME/${run_dir}/yao.py
 
 src_dir=$HOME/far/PHARE
 pyphare_dir=${src_dir}/pyphare

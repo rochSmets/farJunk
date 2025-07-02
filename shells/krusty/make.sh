@@ -1,5 +1,5 @@
-source ${HOME}/codes/far/farJunk/shells/krusty/paths.txt
-cd $build_dir
+source ${HOME}/far/farJunk/shells/krusty/paths.txt
+cd ${build_dir}
 if [[ $build_type == debug ]]; then
     cmake -DCMAKE_BUILD_TYPE=Debug \
           -DCMAKE_CXX_FLAGS="-g3 -O0 -DPHARE_DIAG_DOUBLES=1" \
