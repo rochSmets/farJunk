@@ -1,13 +1,10 @@
-build_dir=$HOME/codes/far/builds/debug/close
-build_type=debug
-### build_type=release
+build_dir=$HOME/far/builds/release/master
+build_type=release
 
-### run_dir=$HOME/codes/far/farMe/Harris/tiny/run
-run_dir=$HOME/codes/far/farMe/ellipsis
-### job_name=${run_dir}/harris.py
-job_name=$run_dir/ellipsis.py
+run_dir=$HOME/far/farMe/ionBeam/yao/run/
+job_name=${run_dir}/yao.py
 
-src_dir=$HOME/codes/far/PHARE
+src_dir=$HOME/far/PHARE
 pyphare_dir=${src_dir}/pyphare
 python_path=${build_dir}:${pyphare_dir}
 
