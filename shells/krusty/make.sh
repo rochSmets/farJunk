@@ -1,3 +1,4 @@
+current_dir=$PWD
 source ${HOME}/far/farJunk/shells/krusty/paths.txt
 cd ${build_dir}
 if [[ $build_type == debug ]]; then
@@ -19,3 +20,4 @@ else
           "$src_dir"
 fi
 make -j
+cd $current_dir
