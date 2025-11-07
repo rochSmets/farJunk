@@ -1,1 +1,1 @@
-build_dir=${HOME}/codes/far/builds/release/master
+build_dir=${HOME}/far/builds/release/ufunc
