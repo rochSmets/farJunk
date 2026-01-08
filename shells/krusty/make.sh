@@ -8,7 +8,7 @@ if [[ $build_type == debug ]]; then
           -DwithCaliper=OFF \
           -DtestMPI=OFF \
           -Dasan=OFF \
-          -DdevMode=OFF \
+          -DdevMode=ON \
           "$src_dir"
 else
     cmake -DCMAKE_CXX_FLAGS="-g3 -O3 -march=native -mtune=native -DPHARE_DIAG_DOUBLES=1" \
@@ -16,7 +16,7 @@ else
           -DwithCaliper=OFF \
           -DtestMPI=OFF \
           -Dasan=OFF \
-          -DdevMode=OFF \
+          -DdevMode=ON \
           "$src_dir"
 fi
 make -j
