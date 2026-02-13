@@ -19,5 +19,5 @@ else
           -DdevMode=ON \
           "$src_dir"
 fi
-make -j
+make -j4
 cd $current_dir
