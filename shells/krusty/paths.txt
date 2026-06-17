@@ -1,8 +1,8 @@
-build_dir=$HOME/far/builds/release/ufunc
+build_dir=$HOME/far/builds/release/close
 build_type=release
 
-run_dir=far/farMe/uFunc
-job_name=$HOME/${run_dir}/wp.py
+run_dir=far/farMe/close
+job_name=$HOME/${run_dir}/test.py
 
 src_dir=$HOME/far/PHARE
 pyphare_dir=${src_dir}/pyphare

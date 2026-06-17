@@ -1,3 +1,0 @@
-build_dir=${HOME}/far/builds/release/ufunc
-python_path=${build_dir}:${HOME}/far/PHARE/pyphare:${PYTHONPATH}
-python_path=${build_dir}:${HOME}/far/PHARE/pyphare

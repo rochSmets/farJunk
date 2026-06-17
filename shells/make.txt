@@ -1,1 +1,0 @@
-build_dir=${HOME}/far/builds/release/ufunc
