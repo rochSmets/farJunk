@@ -10,6 +10,7 @@ python_path=${build_dir}:${pyphare_dir}
 
 echo "src dir     : " $src_dir
 echo "build dir   : " $build_dir
+echo "build type  : " $build_type
 echo "run dir     : " $run_dir
 echo "job name    : " $job_name
 echo "python path : " $python_path
