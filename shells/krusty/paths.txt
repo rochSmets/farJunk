@@ -1,7 +1,7 @@
 build_type=release
-build_dir=$HOME/far/builds/${build_type}/close
+build_dir=$HOME/far/builds/${build_type}/master
 
-run_dir=far/farMe/close
+run_dir=far/farMe/plumes
 job_name=$HOME/${run_dir}/test.py
 
 src_dir=$HOME/far/PHARE
